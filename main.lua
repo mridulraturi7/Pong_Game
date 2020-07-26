@@ -24,6 +24,11 @@ Class = require 'class'
 ]]
 require 'Paddle'
 
+--[[
+    import our Ball Class.
+]]
+require 'Ball'
+
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
 
@@ -58,13 +63,8 @@ function love.load()
     player1 = Paddle(10, 30, 5, 20)
     player2 = Paddle(VIRTUAL_WIDTH - 10, VIRTUAL_HEIGHT - 30, 5, 20)
 
-    --ball position when play starts
-    ballX = VIRTUAL_WIDTH/2 - 2
-    ballY = VIRTUAL_HEIGHT/2 - 2
-
-    --ball velocity variables when play starts
-    ballDX = math.random(2) == 1 and 100 or -100
-    ballDY = math.random(-50, 50)
+    --place the ball in the middle of the screen.
+    ball = Ball(VIRTUAL_WIDTH/2 - 2, VIRTUAL_HEIGHT/2 - 2, 4, 4)
 
     gameState = 'start'
 end
@@ -94,8 +94,7 @@ function love.update(dt)
 
     if gameState == 'play' then
         --scale the velocity by dt so that the movement is framerate - independent
-        ballX = ballX + ballDX * dt
-        ballY = ballY + ballDY * dt
+        ball:update(dt)
     end
 
     player1:update(dt)
@@ -112,12 +111,7 @@ function love.keypressed(key)
             gameState = 'play'
         else
             gameState = 'start'
-
-            ballX = VIRTUAL_WIDTH/2 - 2
-            ballY = VIRTUAL_HEIGHT/2 - 2
-
-            ballDX = math.random(2) == 1 and 100 or -100
-            ballDY = math.random(-50, 50) * 1.5
+            ball:reset()
         end
     end
 end
@@ -144,8 +138,8 @@ function love.draw()
     player1:render()
     player2:render()
 
-    --render ball(center)
-    love.graphics.rectangle('fill', ballX, ballY - 2, 4, 4)
+    --render ball using it class render() method
+    ball:render()
 
     push:apply('end')
 
