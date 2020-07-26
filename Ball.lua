@@ -30,6 +30,7 @@ function Ball:reset()
 end
 
 function Ball:update(dt)
+    --scale the velocity by dt so that the movement is framerate - independent
     self.x = self.x + self.dx * dt
     self.y = self.y + self.dy * dt
 end

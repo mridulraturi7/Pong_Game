@@ -93,7 +93,6 @@ function love.update(dt)
     end
 
     if gameState == 'play' then
-        --scale the velocity by dt so that the movement is framerate - independent
         ball:update(dt)
     end
 
