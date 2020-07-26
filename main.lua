@@ -5,8 +5,18 @@
     First to 10 points wins.
 ]]
 
+--[[
+    push is a library that allows us to draw our game at a
+    virtual resolution, instead of however large our window is;
+    It is used to provide a more retro look and feel to the game.
+]]
+
+push = require 'push'
+
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
+
+
 
 function love.load()
     love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT, {
