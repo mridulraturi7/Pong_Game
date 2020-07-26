@@ -26,6 +26,8 @@ function love.load()
 
     love.graphics.setDefaultFilter('nearest', 'nearest')
 
+    math.randomseed(os.time())
+
     smallFont = love.graphics.newFont('font.ttf', 8)
 
     scoreFont = love.graphics.newFont('font.ttf', 32)
@@ -41,8 +43,19 @@ function love.load()
     player1Score = 0
     player2Score = 0
 
+    --padddle positions on the Y axis
     player1Y = 30
     player2Y = VIRTUAL_HEIGHT - 50
+
+    --ball position when play starts
+    ballX = VIRTUAL_WIDTH/2 - 2
+    ballY = VIRTUAL_HEIGHT/2 - 2
+
+    --ball velocity variables when play starts
+    ballDX = math.random(2) == 1 and 100 or -100
+    ballDY = math.random(-50, 50)
+
+    gameState = 'start'
 end
 
 function love.update(dt)
@@ -60,6 +73,12 @@ function love.update(dt)
         
     elseif love.keyboard.isDown('down') then
         player2Y = math.min(VIRTUAL_HEIGHT - 20, player2Y + PADDLE_SPEED * dt)
+    end
+
+    if gameState == 'start' then
+        --scale the velocity by dt so that the movement is framerate - independent
+        ballX = ballX + ballDX * dt
+        ballY = ballY + ballDY * dt
     end
 
 end
@@ -96,7 +115,7 @@ function love.draw()
     love.graphics.rectangle('fill', VIRTUAL_WIDTH - 10, player2Y, 5, 20)
 
     --render ball(center)
-    love.graphics.rectangle('fill', VIRTUAL_WIDTH/2 - 2, VIRTUAL_HEIGHT/2 - 2, 4, 4)
+    love.graphics.rectangle('fill', ballX, ballY - 2, 4, 4)
 
     push:apply('end')
 
