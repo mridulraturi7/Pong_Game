@@ -19,11 +19,16 @@ WINDOW_HEIGHT = 720
 VIRTUAL_WIDTH = 432
 VIRTUAL_HEIGHT = 243
 
+--speed of the paddle
+PADDLE_SPEED = 200
+
 function love.load()
 
     love.graphics.setDefaultFilter('nearest', 'nearest')
 
     smallFont = love.graphics.newFont('font.ttf', 8)
+
+    scoreFont = love.graphics.newFont('font.ttf', 32)
 
     love.graphics.setFont(smallFont)
 
@@ -32,6 +37,24 @@ function love.load()
         resizable = false,
         vsync = true
     })
+
+    player1Score = 0
+    player2Score = 0
+
+    player1Y = 30
+    player2Y = VIRTUAL_HEIGHT - 50
+end
+
+function love.update(dt)
+    --player1 movement
+    if love.keyboard.isDown('w') then
+        player1Y = player1Y + -PADDLE_SPEED * dt
+
+    elseif love.keyboard.isDown('s') then
+        player1Y = player1Y + PADDLE_SPEED * dt
+    end
+
+    
 end
 
 function love.keypressed(key)
