@@ -43,8 +43,8 @@ function love.draw()
     love.graphics.printf(
         'Hello Pong!',
         0,
-        WINDOW_HEIGHT/2 - 6,
-        WINDOW_WIDTH,
+        VIRTUAL_HEIGHT/2 - 6,
+        VIRTUAL_WIDTH,
         'center'
     )
 
