@@ -85,6 +85,13 @@ function love.load()
     gameState = 'start'
 end
 
+--[[
+    resize funtion is called whenever we resize the screen
+]]
+function love.resize(w, h)
+    push:resize(w, h)
+end
+
 function love.update(dt)
     if gameState == 'serve' then
         --initialize ball's velocity based on player who last scored
