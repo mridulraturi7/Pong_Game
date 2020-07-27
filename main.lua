@@ -75,6 +75,10 @@ function love.load()
     --serving player variable
     servingPlayer = 1
 
+    --AI paddle variable to decide where the ball will hit the paddle
+    --initializing with 9 so that in the first round ball hits at the middle of the paddle
+    hitPosition = 9
+
     --initialize our player paddles
     player1 = Paddle(10, 30, 5, 20)
     player2 = Paddle(VIRTUAL_WIDTH - 10, VIRTUAL_HEIGHT - 30, 5, 20)
@@ -205,6 +209,8 @@ function love.update(dt)
         else
             player2.dy = 0
         end
+        player2:update(dt)
+    end
 
     if gameState == 'play' then
         ball:update(dt)
@@ -212,9 +218,9 @@ function love.update(dt)
 
     player1:update(dt)
 
-    if gameMode == 1 then
-        player2.update(dt)
-
+    if gameMode == 2 then
+        player2:movementAI(ball, hitPosition)
+    end
 end
 
 function love.keypressed(key)
