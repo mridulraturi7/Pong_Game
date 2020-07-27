@@ -50,6 +50,8 @@ function love.load()
 
     scoreFont = love.graphics.newFont('font.ttf', 32)
 
+    largeFont = love.graphics.newFont('font.ttf', 16)
+
     love.graphics.setFont(smallFont)
 
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
@@ -122,23 +124,35 @@ function love.update(dt)
             ball.y = VIRTUAL_HEIGHT - 4
             ball.dy = -ball.dy
         end
-    end
 
-    --update score if the ball goes out of left boundary
-    if ball.x < 0 then
-        --the player who loses will serve
-        servingPlayer = 1
-        player2Score = player2Score + 1
-        ball:reset()
-        gameState = 'serve'
-    end
+        --update score if the ball goes out of left boundary
+        if ball.x < 0 then
+            --the player who loses will serve
+            servingPlayer = 1
+            player2Score = player2Score + 1
 
-    --update score if the ball goes out of right boundary
-    if ball.x > VIRTUAL_WIDTH then
-        servingPlayer = 2
-        player1Score = player1Score + 1
-        ball:reset()
-        gameState = 'serve'
+            if player2Score == 10 then
+                winningPlayer = 2
+                gameState = 'done'
+            else
+                gameState = 'serve'
+                ball:reset()
+            end
+        end
+
+        --update score if the ball goes out of right boundary
+        if ball.x > VIRTUAL_WIDTH then
+            servingPlayer = 2
+            player1Score = player1Score + 1
+
+            if player1Score == 10 then
+                winningPlayer = 1
+                gameState = 'done'
+            else
+                gameState = 'serve'
+                ball:reset()
+            end
+        end
     end
 
     --player1 movement
