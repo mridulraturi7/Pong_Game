@@ -75,6 +75,10 @@ function love.load()
     --serving player variable
     servingPlayer = 1
 
+    -- player who won the game; not set to a proper value until we reach
+    -- that state in the game
+    winningPlayer = 0
+
     --AI paddle variable to decide where the ball will hit the paddle
     --initializing with 9 so that in the first round ball hits at the middle of the paddle
     hitPosition = 9
@@ -121,6 +125,9 @@ function love.update(dt)
             else
                 ball.dy = math.random(10, 150)
             end
+
+            --genrating a random value so that ball can hit the AI paddle at any position within the paddle.
+            hitPosition = math.random(0, 19)
 
             sounds['paddle_hit']:play()
         end
@@ -254,7 +261,7 @@ function love.keypressed(key)
         gameMode = 1
         gameState = 'serve'
 
-    elseif gameState == 'main' and key == '2' then
+    elseif gameState == 'menu' and key == '2' then
         gameMode = 2
         gameState = 'serve'
     end
