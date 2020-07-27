@@ -126,16 +126,19 @@ function love.update(dt)
 
     --update score if the ball goes out of left boundary
     if ball.x < 0 then
+        --the player who loses will serve
+        servingPlayer = 1
         player2Score = player2Score + 1
         ball:reset()
-        gameState = start
+        gameState = 'start'
     end
 
     --update score if the ball goes out of right boundary
     if ball.x > VIRTUAL_WIDTH then
+        servingPlayer = 2
         player1Score = player1Score + 1
         ball:reset()
-        gameState = start
+        gameState = 'start'
     end
 
     --player1 movement
@@ -175,10 +178,9 @@ function love.keypressed(key)
 
     elseif key == 'enter' or key == 'return' then
         if gameState == 'start' then
+            gameState = 'serve'
+        elseif gameState == 'serve' then
             gameState = 'play'
-        else
-            gameState = 'start'
-            ball:reset()
         end
     end
 end
