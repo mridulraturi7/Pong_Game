@@ -111,6 +111,20 @@ function love.update(dt)
         end
     end
 
+    --update score if the ball goes out of left boundary
+    if ball.x < 0 then
+        player2Score = player2Score + 1
+        ball:reset()
+        gameState = start
+    end
+
+    --update score if the ball goes out of right boundary
+    if ball.x > VIRTUAL_WIDTH then
+        player1Score = player1Score + 1
+        ball:reset()
+        gameState = start
+    end
+
     --player1 movement
     if love.keyboard.isDown('w') then
         player1.dy = -PADDLE_SPEED
