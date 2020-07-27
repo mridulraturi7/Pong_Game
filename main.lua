@@ -130,7 +130,7 @@ function love.update(dt)
         servingPlayer = 1
         player2Score = player2Score + 1
         ball:reset()
-        gameState = 'start'
+        gameState = 'serve'
     end
 
     --update score if the ball goes out of right boundary
@@ -138,7 +138,7 @@ function love.update(dt)
         servingPlayer = 2
         player1Score = player1Score + 1
         ball:reset()
-        gameState = 'start'
+        gameState = 'serve'
     end
 
     --player1 movement
