@@ -91,6 +91,7 @@ function love.load()
     ball = Ball(VIRTUAL_WIDTH/2 - 2, VIRTUAL_HEIGHT/2 - 2, 4, 4)
 
     --variable to decide game mode - player vs player and player vs AI
+    --by default PvP
     gameMode = 1
 
     gameState = 'start'
@@ -292,6 +293,14 @@ function love.draw()
         love.graphics.setFont(smallFont)
         love.graphics.printf('Player ' .. tostring(servingPlayer) .. "'s serve!", 0, 10, VIRTUAL_WIDTH, 'center')
         love.graphics.printf('Press Enter to serve!', 0, 20, VIRTUAL_WIDTH, 'center')
+        love.graphics.print('Player 1', 10, 20)
+        
+        if gameMode == 1 then
+            love.graphics.print('Player 2', VIRTUAL_WIDTH - 44, 20)
+        elseif gameMode == 2 then
+            love.graphics.print('Computer', VIRTUAL_WIDTH - 44, 20)
+        end
+
     elseif gameState == 'play' then
         --no message
     elseif gameState == 'done' then
