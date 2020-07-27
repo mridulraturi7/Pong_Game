@@ -72,6 +72,22 @@ function love.load()
 end
 
 function love.update(dt)
+    if gameState == 'play' then
+        --detecting ball collision with player1
+        if ball:collides(player1) then
+            ball.dx = -ball.dx * 1.03
+            ball.x = paddle.x + 5
+
+            --Randomize velocity in y direction
+            if ball.dy < 0 then
+                ball.dy = -math.random(10, 150)
+            else
+                ball.dy = math.random(10, 150)
+            end
+        end
+
+    end
+
     --player1 movement
     if love.keyboard.isDown('w') then
         player1.dy = -PADDLE_SPEED
