@@ -244,6 +244,10 @@ function love.keypressed(key)
     elseif gameState == 'menu' and key == '1' then
         gameMode = 1
         gameState = 'serve'
+
+    elseif gameState == 'main' and key == '2' then
+        gameMode = 2
+        gameState = 'serve'
     end
 end
 
