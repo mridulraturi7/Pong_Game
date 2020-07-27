@@ -82,6 +82,9 @@ function love.load()
     --place the ball in the middle of the screen.
     ball = Ball(VIRTUAL_WIDTH/2 - 2, VIRTUAL_HEIGHT/2 - 2, 4, 4)
 
+    --variable to decide game mode - player vs player and player vs AI
+    gameMode = 1
+
     gameState = 'start'
 end
 
@@ -217,7 +220,7 @@ function love.keypressed(key)
 
     elseif key == 'enter' or key == 'return' then
         if gameState == 'start' then
-            gameState = 'serve'
+            gameState = 'menu'
         elseif gameState == 'serve' then
             gameState = 'play'
         elseif gameState == 'done' then
@@ -237,6 +240,10 @@ function love.keypressed(key)
                 servingPlayer = 2
             end
         end
+
+    elseif gameState == 'menu' and key == '1' then
+        gameMode = 1
+        gameState = 'serve'
     end
 end
 
@@ -254,6 +261,13 @@ function love.draw()
         love.graphics.setFont(smallFont)
         love.graphics.printf('Welcome to Pong!', 0, 10, VIRTUAL_WIDTH, 'center')
         love.graphics.printf('Press Enter to begin!', 0, 20, VIRTUAL_WIDTH, 'center')
+
+    elseif gameState == 'menu' then
+        love.graphics.setFont(smallFont)
+        love.graphics.printf('Select Mode', 0, 10, VIRTUAL_WIDTH, 'center')
+        love.graphics.printf('1 : Player vs Player', 0, 20, VIRTUAL_WIDTH, 'center')
+        love.graphics.printf('2 : Player vs AI', 0, 30, VIRTUAL_WIDTH, 'center')
+
     elseif gameState == 'serve' then
         love.graphics.setFont(smallFont)
         love.graphics.printf('Player ' .. tostring(servingPlayer) .. "'s serve!", 0, 10, VIRTUAL_WIDTH, 'center')
