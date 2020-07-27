@@ -195,6 +195,22 @@ function love.keypressed(key)
             gameState = 'serve'
         elseif gameState == 'serve' then
             gameState = 'play'
+        elseif gameState == 'done' then
+            --restart phase
+            gameState = 'serve'
+            --put the ball in the middle
+            ball:reset()
+
+            --reset score to 0
+            player1Score = 0
+            player2Score = 0
+
+            --set the serving player to the losing player
+            if winningPlayer == 1 then
+                servingPlayer = 2
+            else
+                servingPlayer = 2
+            end
         end
     end
 end
