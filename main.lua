@@ -285,9 +285,9 @@ function love.draw()
 
     elseif gameState == 'menu' then
         love.graphics.setFont(smallFont)
-        love.graphics.printf('Select Mode', 0, 10, VIRTUAL_WIDTH, 'center')
-        love.graphics.printf('1 : Player vs Player', 0, 20, VIRTUAL_WIDTH, 'center')
-        love.graphics.printf('2 : Player vs AI', 0, 30, VIRTUAL_WIDTH, 'center')
+        love.graphics.printf('Select Mode', 0, 20, VIRTUAL_WIDTH, 'center')
+        love.graphics.printf('1 : Player vs Player', 0, 35, VIRTUAL_WIDTH, 'center')
+        love.graphics.printf('2 : Player vs AI', 0, 50, VIRTUAL_WIDTH, 'center')
 
     elseif gameState == 'serve' then
         love.graphics.setFont(smallFont)
