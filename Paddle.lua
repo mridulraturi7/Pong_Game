@@ -26,6 +26,19 @@ function Paddle:update(dt)
     end
 end
 
+--[[
+    Computer Player Control.
+    following funtion takes ball and a random variable hitposition as arguments.
+    hitposition will decide randomly as to where the ball will hit the paddle. 
+]]
+function Paddle:movementAI(ball, hitPosition)
+    if ball.dy < 0 then
+        self.y = math.max(0, ball.y - hitPosition)
+    else
+        self.y = math.min(VIRTUAL_HEIGHT - self.height, ball.y - hitPosition)
+    end
+end
+
 function Paddle:render()
     love.graphics.rectangle('fill', self.x, self.y, self.width, self.height)
 end
