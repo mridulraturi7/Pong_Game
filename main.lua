@@ -58,8 +58,12 @@ function love.load()
         vsync = true
     })
 
+    --initialize score variables
     player1Score = 0
     player2Score = 0
+
+    --serving player variable
+    servingPlayer = 1
 
     --initialize our player paddles
     player1 = Paddle(10, 30, 5, 20)
@@ -72,7 +76,16 @@ function love.load()
 end
 
 function love.update(dt)
-    if gameState == 'play' then
+    if gameState == 'serve' then
+        --initialize ball's velocity based on player who last scored
+        --before switching to play
+        ball.dy = math.random(-50, 50)
+        if servingPlayer == 1 then
+            ball.dx = math.random(140, 200)
+        else
+            ball.dx = -math.random(140, 200)
+        end 
+    elseif gameState == 'play' then
         --detecting ball collision with player1
         if ball:collides(player1) then
             ball.dx = -ball.dx * 1.03
