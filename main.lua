@@ -195,22 +195,25 @@ function love.update(dt)
     end
 
     --player2 movement
-    if love.keyboard.isDown('up') then
-        player2.dy = -PADDLE_SPEED
+    if gameMode == 1 then
+        if love.keyboard.isDown('up') then
+            player2.dy = -PADDLE_SPEED
         
-    elseif love.keyboard.isDown('down') then
-        player2.dy = PADDLE_SPEED
+        elseif love.keyboard.isDown('down') then
+            player2.dy = PADDLE_SPEED
 
-    else
-        player2.dy = 0
-    end
+        else
+            player2.dy = 0
+        end
 
     if gameState == 'play' then
         ball:update(dt)
     end
 
     player1:update(dt)
-    player2:update(dt)
+
+    if gameMode == 1 then
+        player2.update(dt)
 
 end
 
