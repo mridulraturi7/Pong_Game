@@ -192,6 +192,8 @@ function love.draw()
     love.graphics.clear(40, 45, 52, 255)
 
     love.graphics.setFont(smallFont)
+
+    displayScore()
     
     if gameState == 'start' then
         love.graphics.printf('Hello Start State!', 0, 20, VIRTUAL_WIDTH, 'center')
@@ -220,4 +222,10 @@ function displayFPS()
     love.graphics.setFont(smallFont)
     love.graphics.setColor(0, 255, 0, 255)
     love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 10, 10)
+end
+
+function displayScore()
+    love.graphics.setFont(scoreFont)
+    love.graphics.print(tostring(player1Score), VIRTUAL_WIDTH/2 - 50, VIRTUAL_HEIGHT/3)
+    love.graphics.print(tostring(player2Score), VIRTUAL_WIDTH/2 + 30, VIRTUAL_HEIGHT/3)
 end
