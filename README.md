@@ -49,3 +49,7 @@ As of now, I have provided two game modes : first one is the <b>Player vs Player
 In the <b>Player vs Player</b> mode, Player1 can move the paddle up and down using 'W' and 'S' keys respectively while Player2 can move the paddle up and down using 'Up Arrow Key' and 'Down Arrow Key' respectively. Player scoring 10 points first wins the game.
 
 In the <b>Player vs AI</b> mode, Player can move the paddle up and down using 'W' and 'S' keys respectively. AI player will behave as per the logic implemented. Player scoring 10 points first wins the game.
+
+External Libraries Used : 
+
+> push.lua - push is a library that will allow us to draw our game at a virtual resolution, regardless of however large our window is. Basically it is used to provide a more retro look and feel to the game.
