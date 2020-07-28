@@ -23,3 +23,5 @@ LOVE2D Support by Pixelbyte Studios allows you to run the love application direc
 As of now, I have provided two game modes : first one is the Player vs Player and the second is Player vs AI.
 
 In the Player vs Player, Player1 can move the paddle up and down using 'W' and 'S' keys while Player2 can move the paddle up and down using 'Up Arrow Key' and 'Down Arrow Key'. Player scoring 10 points first wins the game.
+
+In the Player vs AI mode, Player can move the paddle up and down using 'W' and 'S' keys respectively. AI player will behave as per the logic implemented. Player scoring 10 points first wins the game.
