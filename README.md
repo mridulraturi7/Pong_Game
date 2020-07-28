@@ -16,4 +16,4 @@ For Visual Studio Code, install following extensions:
 
 > Lua Debug - [Click here to download](https://marketplace.visualstudio.com/items?itemName=actboy168.lua-debug)
 
-> LOVE2D Support by Pixelbyte Solution - Click here to download.
+> LOVE2D Support by Pixelbyte Solution - [Click here to download](https://marketplace.visualstudio.com/items?itemName=pixelbyte-studios.pixelbyte-love2d)
