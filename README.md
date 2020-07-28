@@ -44,7 +44,7 @@ For Visual Studio Code, install following extensions:
 
 LOVE2D Support by Pixelbyte Studios extension allows you to run the love application directly through Visual Studio Code by a simple shortcut : Left-Alt + L
 
-As of now, I have provided two game modes : first one is the Player vs Player and the second one is Player vs AI.
+As of now, I have provided two game modes : first one is the <b>Player vs Player</b> and the second one is <b>Player vs AI</b>.
 
 In the Player vs Player mode, Player1 can move the paddle up and down using 'W' and 'S' keys respectively while Player2 can move the paddle up and down using 'Up Arrow Key' and 'Down Arrow Key' respectively. Player scoring 10 points first wins the game.
 
