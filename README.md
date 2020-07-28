@@ -18,4 +18,4 @@ For Visual Studio Code, install following extensions:
 
 > LOVE2D Support by Pixelbyte Studios - [Click here to download](https://marketplace.visualstudio.com/items?itemName=pixelbyte-studios.pixelbyte-love2d)
 
-LOVE2D Support by Pixelbyte Studios allows you to run the love application directly through Visual Studio Code by a simple shortcut - Left-Alt + L
+LOVE2D Support by Pixelbyte Studios allows you to run the love application directly through Visual Studio Code by a simple shortcut : Left-Alt + L
