@@ -9,3 +9,11 @@ I have developed this game using LOVE2D gaming framework (version 0.10.2) with L
 For running this game you will need to install LOVE2D on your system. [Click here to download LOVE2D](https://bitbucket.org/rude/love/downloads/)
 
 Download Lua from this [link](https://excellmedia.dl.sourceforge.net/project/luabinaries/5.2.4/Tools%20Executables/lua-5.2.4_Win64_bin.zip)
+
+For Visual Studio Code, install following extensions:
+
+> vscode-lua - Click here to download.
+
+> Lua Debug - Click here to download.
+
+> LOVE2D Support by Pixelbyte Solution - Click here to download.
