@@ -3,7 +3,7 @@
 <p>&nbsp;</p>
 
 <div align = "center">
-<img src="images/pong_logo.png" width="140" />
+<img src="images/pong_logo.png" width="160" />
 </div>
 
 <p>&nbsp;</p>
