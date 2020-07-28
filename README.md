@@ -6,9 +6,13 @@ Pong is a game originally programmed by Atari in 1972. It features two paddles, 
 
 I have developed this game using LOVE2D gaming framework (version 0.10.2) with Lua as the scripting language.
 
+<p>&nbsp;</p>
+
 <div align = "center">
 <img src="images/love_logo.png" width="140" />
 </div>
+
+<p>&nbsp;</p>
 
 For running this game you will need to install LOVE2D on your system. [Click here to download LOVE2D](https://bitbucket.org/rude/love/downloads/)
 
