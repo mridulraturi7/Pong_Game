@@ -12,7 +12,7 @@ Download Lua from this [link](https://excellmedia.dl.sourceforge.net/project/lua
 
 For Visual Studio Code, install following extensions:
 
-> vscode-lua - Click here to download.
+> vscode-lua - [Click here to download](https://marketplace.visualstudio.com/items?itemName=trixnz.vscode-lua)
 
 > Lua Debug - Click here to download.
 
