@@ -52,6 +52,6 @@ In the <b>Player vs AI</b> mode, Player can move the paddle up and down using 'W
 
 External Libraries Used : 
 
-> [push.lua](https://github.com/Ulydev/push) - push is a library that will allow us to draw our game at a virtual resolution, regardless of however large our window is. Basically it is used to provide a more retro look and feel to the game.
+> [push.lua](https://github.com/Ulydev/push) - push library allow us to draw our game at a virtual resolution, regardless of however large our window is. Basically it is used to provide a more retro look and feel to the game.
 
 > [class.lua](https://github.com/vrld/hump/blob/master/class.lua) - the "Class" library we're using will allow us to represent anything in our game as code, rather than keeping track of many disparate variables and methods. Basically, it is used to utilize the concepts of Object Oriented Programming.
