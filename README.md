@@ -42,7 +42,7 @@ For Visual Studio Code, install following extensions:
 
 > LOVE2D Support - [Click here to download](https://marketplace.visualstudio.com/items?itemName=pixelbyte-studios.pixelbyte-love2d)
 
-LOVE2D Support by Pixelbyte Studios extension allows you to run the love application directly through Visual Studio Code by a simple shortcut : Left-Alt + L
+LOVE2D Support by Pixelbyte Studios extension allows us to run the love application directly through Visual Studio Code by a simple shortcut : Left-Alt + L
 
 As of now, I have provided two game modes : first one is the <b>Player vs Player</b> and the second one is <b>Player vs AI</b>.
 
