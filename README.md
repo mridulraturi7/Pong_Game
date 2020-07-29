@@ -40,7 +40,7 @@ For Visual Studio Code, install following extensions:
 
 > Lua Debug - [Click here to download](https://marketplace.visualstudio.com/items?itemName=actboy168.lua-debug)
 
-> LOVE2D Support by Pixelbyte Studios - [Click here to download](https://marketplace.visualstudio.com/items?itemName=pixelbyte-studios.pixelbyte-love2d)
+> LOVE2D Support - [Click here to download](https://marketplace.visualstudio.com/items?itemName=pixelbyte-studios.pixelbyte-love2d)
 
 LOVE2D Support by Pixelbyte Studios extension allows you to run the love application directly through Visual Studio Code by a simple shortcut : Left-Alt + L
 
