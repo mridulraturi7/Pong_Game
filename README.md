@@ -10,7 +10,7 @@
 
 This repository contains source code of the Pong game.
 
-Pong is a 2D game originally programmed by Atari that came out in 1972. It features two paddles, controlled by players, with the goal of getting the ball past your opponent's edge. Player scoring 10 points first wins.
+Pong is a 2D game originally programmed by Atari that came out in 1972. It features two paddles, controlled by players, with the goal of getting the ball past your opponent's edge. The player who scores 10 points first wins.
 
 I have developed this game using LOVE2D gaming framework (version 0.10.2) with Lua as the scripting language.
 
