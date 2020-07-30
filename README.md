@@ -32,7 +32,7 @@ For running this game you will need to install LOVE2D on your system. [Click her
 
 <p>&nbsp;</p>
 
-Download Lua from this [link](https://excellmedia.dl.sourceforge.net/project/luabinaries/5.2.4/Tools%20Executables/lua-5.2.4_Win64_bin.zip)
+You will also need to setup lua in your system. Download Lua from this [link](https://excellmedia.dl.sourceforge.net/project/luabinaries/5.2.4/Tools%20Executables/lua-5.2.4_Win64_bin.zip)
 
 For Visual Studio Code, install following extensions:
 
