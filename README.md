@@ -22,7 +22,7 @@ I have developed this game using LOVE2D gaming framework (version 0.10.2) with L
 
 <p>&nbsp;</p>
 
-For running this game you will need to install LOVE2D on your system. [Click here to download LOVE2D](https://bitbucket.org/rude/love/downloads/)
+For running this game you will need to install LOVE2D on your system. [Click here to download LOVE2D](https://bitbucket.org/rude/love/downloads/).
 
 <p>&nbsp;</p>
 
