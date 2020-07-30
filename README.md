@@ -55,3 +55,5 @@ External Libraries Used :
 > [push.lua](https://github.com/Ulydev/push) - push library allows us to draw our game at a virtual resolution, regardless of however large our window is. Basically, it is used to provide a more retro look and feel to the game.
 
 > [class.lua](https://github.com/vrld/hump/blob/master/class.lua) - class library allows us to represent anything in our game as code, rather than keeping track of many disparate variables and methods. Basically, it is used to utilize the concepts of Object Oriented Programming.
+
+You can have a look at the demo video.
